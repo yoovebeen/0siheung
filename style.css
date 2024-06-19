@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard Variable";
+}
+
+body{
+    background-color: #F8FBF2;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+header h1{
+    font-family: 'GyeonggiTitleM';
+    font-size: 20px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+}
+
+.menu > li{
+    margin: 0 20px;
+}
+
+header a {
+    color: #444;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: #8EC31F;
+}
+
+.buttonPage {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#page, #pageHere {
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333333;
+    border: 1px solid #333333;
+    border-radius: 2000px;
+    padding: 12px 36px;
+    margin: 0 24px;
+}
+
+#page:hover, #pageHere:hover {
+    background-color: #638E09;
+    color: #fff;
+}
+
+#pageHere {
+    background-color: #8EC31F;
+    color: #fff;
+}
+
+.hero {
+    background-image: url('010.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 700px; /* 적절한 높이 설정 */
+    text-align: center;
+    align-items: center;
+}
+
+.hero > p {
+    padding-top: 190px;
+    font-size: 26px;
+    color: #244A2C;
+    font-weight: 600;
+    padding-bottom: 60px;
+}
+
+.hero > h1 {
+    font-size: 60px;
+    line-height: 1.7;
+    padding-bottom: 120px;
+}
+
+.textbox {
+    padding: 88px 112px;
+    margin: 120px auto 160px auto;
+    background-color: #FFFEFE;
+    width: 56vw;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.big {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.text {
+    margin-top: 0.4rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.spacebox, .textbox {
+    transition: transform 0.6s ease-out;
+    transform: translateY(20vh);
+
+}
+
+.spacebox.active, .textbox.active {
+    transform: translateY(0);
+}
+
+.spacebox {
+    background-color: #FFFEFE;
+    padding: 80px 100px;
+    width: 56vw;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: flex;
+    margin: 140px auto 100px auto;
+}
+
+.spaceimg > img {
+    width: 600px;
+}
+
+.desc {
+    margin-left: 80px;
+}
+
+.desc > h4 {
+    padding-top: 36px;
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+.detail {
+    position: relative;
+    height: 80px;
+    margin-bottom: 72px;
+}
+
+.detail > p {
+    line-height: 1.4;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.detail::after {
+    content: "";  /* 필수 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 80px;
+    width: 2px;
+    background-color: black;
+}
+
+.desc > a {
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 12px 28px;
+}
+
+.spacebox:nth-of-type(2) .detail::after {
+    content: "";  /* 필수 */
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 80px;
+    width: 2px;
+    background-color: black;
+}
+
+.spacebox:nth-of-type(2) .desc {
+    padding-right: 40px !important;  /* 우측 패딩 추가로 설명 영역과 이미지 사이 간격 확장 */
+}
+
+.spacebox:nth-of-type(2) .spaceimg {
+    padding-left: 40px !important;  /* 좌측 패딩 추가로 이미지 영역과 설명 사이 간격 확장 */
+}
+
+/* footer */
+footer{
+    margin-top: 50px;
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 30px;
+}
+footer img{
+    width: 100px;
+    margin-bottom: 20px;
+}
+footer i{
+    width: 30px;
+    color: white;
+}

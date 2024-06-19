@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body::-webkit-scrollbar { 
+    display:none; 
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard Variable";
+}
+body{
+    background-color: #3E3E3E;
+
+}
+
+/* header */
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* 예시로 투명한 검정 배경색 적용 */
+    transition: background-color 0.3s;
+}
+header {
+    background-color: #D2ED9C;
+    padding: 20px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header h1{
+    font-family: 'GyeonggiTitleM';
+    font-size: 20px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+}
+li{
+    margin: 0 20px;
+}
+header a {
+    color: #444;
+    text-decoration: none;
+}
+li a:hover{
+    color: #8EC31F;
+}
+
+/* 히어로 */
+.thum{
+    width: 100%;
+    height: 500px;
+    background-color: #D2ED9C;
+    text-align: center;
+    padding: 50px 0;
+}
+.thum h2{
+    font-family: 'GyeonggiTitleM';
+    line-height: 160%;
+    font-size: 24px;
+}
+.thum h4{
+    font-size: 10px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* 무한 스크롤 */
+.wrap {
+    display: flex; 
+    overflow: hidden;
+    margin-top: 40px;
+}
+.wrap .rolling-list ul {
+    padding : 0px;
+    display: flex;
+}
+.wrap .rolling-list ul li { 
+    box-sizing: border-box; 
+    display: flex; 
+    align-items: center; 
+    flex-shrink: 0; 
+    width: 250px;
+    height: 250px;
+}
+li img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.rolling-list.original {
+    animation: rollingleft1 90s linear infinite;
+}
+.rolling-list.clone {
+    animation: rollingleft2 90s linear infinite;
+}
+
+@keyframes rollingleft1 {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-100%); }
+    50.01% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes rollingleft2 {
+    0% { transition: translateX(0); }
+    100% { transform: translateX(-200%); }
+}
+
+.title{
+    text-align: center;
+    font-family: 'GyeonggiTitleM';
+    margin-top: 60px;
+    font-size: 20px;
+    color: white;
+}
+.hero{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+.card{
+    width: 300px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    margin: 20px;
+    font-size: 10px;
+}
+.card img{
+    width: 300px;
+}
+.card h3{
+    font-size: 15px;
+    margin: 10px 0 5px 0;
+}
+.card p{
+    font-size: 12px;
+    font-weight: 400;
+}
+.card:nth-child(2){
+    transition-delay: 200ms;
+}
+.card:nth-child(3){
+    transition-delay: 400ms;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateX(-20%);
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* footer */
+footer{
+    margin-top: 50px;
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 30px;
+}
+footer img{
+    width: 100px;
+    margin-bottom: 20px;
+}
+footer i{
+    width: 30px;
+    color: white;
+}

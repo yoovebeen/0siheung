@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body::-webkit-scrollbar { 
+    display:none; 
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard Variable";
+}
+body{
+    background-color: #E7E8E8;
+}
+
+/* header */
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* 예시로 투명한 검정 배경색 적용 */
+    transition: background-color 0.3s;
+}
+header {
+    background-color: transparent;
+    position: fixed;
+    padding: 20px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header h1{
+    font-family: 'GyeonggiTitleM';
+    font-size: 20px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+}
+li{
+    margin: 0 20px;
+}
+header a {
+    color: #444;
+    text-decoration: none;
+}
+li a:hover{
+    color: #8EC31F;
+}
+
+/* section */
+section{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10vh;
+
+}
+
+/* wrap */
+.wrap{
+    position: relative;
+    top: 0;
+    width: 100%;
+    transition: 2s;
+}
+
+/* section0 */
+.s0{
+    background-image: url('header-img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.scroll-down {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.scroll-down::after {
+    content: '';
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    border: 4px solid #555;
+    height: 32px;
+    width: 32px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1.2s ease-in-out infinite;
+}
+.scroll-down::after {
+    top: 30%;
+    animation-delay: .3s;
+}
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+}
+
+
+/* section1 */
+.s1{
+    display: flex;
+    gap: 100px;
+    background-color: #8EC31F;
+}
+.s1 img{
+    width: 400px;
+}
+.plus{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.plus h1{
+    color: white;
+    margin: 15px 0 ;
+}
+.plus h2{
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* section2 */
+.s2{
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+.info{
+    margin-top: 30vh;
+}
+.info h1{
+    color: #8EC31F;
+    font-family: 'GyeonggiTitleM';
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.info h3{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+/* section3 */
+.s3{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.color{
+    text-align: center;
+    color: white;
+    line-height: 100vh;
+    width: 50vw;
+    height: 100vh;
+    background-color: #8EC31F;
+}
+.info-2{
+    width: 50vw;
+    text-align: left;
+    padding-left: 5vw;
+}
+.info-2 h1{
+    margin-bottom: 20px;
+    font-family: 'GyeonggiTitleM';
+}
+.info-2 h3{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/* section4 */
+.s4 .info-2{
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.s4{
+    padding-top: 20vh;
+}
+.s4 img{
+    margin-bottom: 10vh;
+}
+
+/* section5 */
+.name{
+    font-size: 100px;
+    color: #8EC31F;
+    padding-bottom: 50px;
+}
+.s5 .info-2{
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 30vh;
+}
+
+/* top */
+.to-top{
+    background-color: #444;
+    color: white;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.material-symbols-rounded{
+    width: 25px;
+    height: 20px;
+}
+.to-top h4{
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+/* page */
+.page-btn{
+    position: fixed;
+    left: 5vw;
+    bottom: 40vh;
+    width: 10px;
+}
+.page-btn div{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.page-btn .pointed{
+    background-color: #8EC31F;
+}
+
